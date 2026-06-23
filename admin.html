@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Temple Admin Panel</h1>
+
+<div class="login-box">
+
+<h2>Total Bookings</h2>
+<h1 id="totalBookings"></h1>
+
+<br>
+
+<input type="number" id="deleteToken"
+placeholder="Enter Token Number">
+
+<br><br>
+
+<button onclick="deleteBooking()">
+Delete Booking
+</button>
+
+<br><br>
+
+<button onclick="clearBookings()">
+Delete All Bookings
+</button>
+
+<br><br>
+
+<a href="dashboard.html">
+<button>Back to Dashboard</button>
+</a>
+
+</div>
+
+<script>
+
+let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+document.getElementById("totalBookings").innerHTML =
+bookings.length;
+
+function clearBookings()
+{
+    localStorage.removeItem("bookings");
+
+    alert("All bookings deleted successfully");
+
+    location.reload();
+}
+
+function deleteBooking()
+{
+    let token = parseInt(document.getElementById("deleteToken").value);
+
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+    bookings = bookings.filter(function(booking)
+    {
+        return booking.token != token;
+    });
+
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    alert("Booking deleted successfully");
+
+    location.reload();
+}
+
+</script>
+
+</body>
+</html>

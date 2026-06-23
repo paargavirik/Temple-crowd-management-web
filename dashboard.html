@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temple Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="dashboard.html">Home</a>
+    <a href="booking.html">Book Slot</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html">Logout</a>
+</div>
+
+<h1>🏛 Temple Dashboard</h1>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Total Visitors</h3>
+        <h1 id="visitorCount">350</h1>
+    </div>
+
+    <div class="card">
+        <h3>Today's Bookings</h3>
+        <h1 id="bookingCount">120</h1>
+    </div>
+
+    <div class="card">
+        <h3>Crowd Level</h3>
+        <h1 id="crowdLevel">Medium</h1>
+    </div>
+
+    <div class="card">
+        <h3>Available Slots</h3>
+        <h1>4</h1>
+    </div>
+
+</div>
+
+<br>
+
+<a href="booking.html">
+    <button>Book Slot</button>
+</a>
+
+<a href="history.html">
+    <button>Booking History</button>
+</a>
+
+<a href="admin.html">
+    <button>Admin Panel</button>
+</a>
+
+<a href="search.html">
+    <button>Search Booking</button>
+</a>
+
+<br><br>
+
+<h2>Crowd Analytics</h2>
+
+<div style="width:300px; margin:auto;">
+    <canvas id="crowdChart"></canvas>
+</div>
+
+<a href="index.html">
+    <button>Logout</button>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

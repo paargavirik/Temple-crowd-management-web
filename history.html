@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Booking History</h1>
+
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>Token</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Visitors</th>
+            <th>Crowd</th>
+        </tr>
+    </thead>
+
+    <tbody id="historyTable">
+    </tbody>
+</table>
+<th>Action</th>
+<br>
+
+<button onclick="downloadCSV()">
+Download Report
+</button>
+
+<a href="dashboard.html">
+    <button>Back to Dashboard</button>
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
